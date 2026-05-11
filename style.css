@@ -443,3 +443,28 @@ margin-bottom:15px;
 	
 	
 }
+
+
+/* =========================
+   MOBILE BOTTOM LOGO
+========================= */
+
+.mobile-bottom-logo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-bottom-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 10px;
+        background: #ffffff;
+    }
+
+    .mobile-bottom-logo img {
+        height: 70px;
+        width: auto;
+        opacity: 0.9;
+    }
+}
