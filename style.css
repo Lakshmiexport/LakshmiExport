@@ -444,3 +444,38 @@ margin-bottom:15px;
 	
 }
 
+
+
+/* =========================
+   MOBILE MENU ICON RIGHT
+========================= */
+
+@media (max-width: 768px) {
+
+    /* If navbar uses flex */
+    .navbar,
+    .nav-bar,
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hamburger container */
+    .menu-toggle,
+    .hamburger,
+    .mobile-menu-btn {
+        margin-left: auto;      /* PUSH TO RIGHT */
+        order: 2;               /* ENSURE LAST ITEM */
+    }
+
+    /* If icon is absolutely positioned */
+    .menu-toggle,
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
