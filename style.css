@@ -446,36 +446,48 @@ margin-bottom:15px;
 
 
 
-/* =========================
-   MOBILE MENU ICON RIGHT
-========================= */
-
 @media (max-width: 768px) {
 
-    /* If navbar uses flex */
-    .navbar,
-    .nav-bar,
-    header nav {
+    header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        position: relative;
+    }
+
+    /* LOGO stays left */
+    .logo-area {
+        display: flex;
         align-items: center;
     }
 
-    /* Hamburger container */
-    .menu-toggle,
-    .hamburger,
-    .mobile-menu-btn {
-        margin-left: auto;      /* PUSH TO RIGHT */
-        order: 2;               /* ENSURE LAST ITEM */
-    }
+    /* HAMBURGER → RIGHT SIDE */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
 
-    /* If icon is absolutely positioned */
-    .menu-toggle,
-    .hamburger {
         position: absolute;
-        right: 20px;
-        left: auto;
+        right: 20px;   /* FORCE RIGHT */
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    /* NAV dropdown stays hidden by default */
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(90deg, #ff5757, #e64545);
+        padding: 15px 0;
+        border-radius: 12px;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 }
