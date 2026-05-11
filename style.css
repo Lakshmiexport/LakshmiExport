@@ -401,6 +401,15 @@ margin-bottom:15px;
 
 @media (max-width: 768px) {
 
+	header {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        margin-left: auto;   /* PUSHES ICON TO RIGHT */
+    }
+
     .menu-toggle {
         display: flex;
     }
